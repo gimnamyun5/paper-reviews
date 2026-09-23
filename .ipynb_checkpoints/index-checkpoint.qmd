@@ -1,0 +1,14 @@
+---
+title: "Paper Reviews"
+
+listing:
+  contents: papers
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+---
+
+This site contains my notes and reviews of papers related to statistics,
+machine learning, biomedical AI, and related topics.

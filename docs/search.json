@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "papers/Hwang-2026-corrboot.html",
+    "href": "papers/Hwang-2026-corrboot.html",
+    "title": "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis",
+    "section": "",
+    "text": "Title: A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis\nAuthors: Seungyong Hwang, Janghyun Kim, and Hyemi Choi\nTopic: Diagnostic test accuracy meta-analysis, bootstrap inference, and SROC AUC comparison"
+  },
+  {
+    "objectID": "papers/Hwang-2026-corrboot.html#paper-information",
+    "href": "papers/Hwang-2026-corrboot.html#paper-information",
+    "title": "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis",
+    "section": "",
+    "text": "Title: A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis\nAuthors: Seungyong Hwang, Janghyun Kim, and Hyemi Choi\nTopic: Diagnostic test accuracy meta-analysis, bootstrap inference, and SROC AUC comparison"
+  },
+  {
+    "objectID": "papers/Hwang-2026-corrboot.html#research-question",
+    "href": "papers/Hwang-2026-corrboot.html#research-question",
+    "title": "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis",
+    "section": "Research Question",
+    "text": "Research Question\nHow can we reliably compare the diagnostic accuracy of two tests when the same participants undergo both tests and only aggregated 2 × 2 tables are available?"
+  },
+  {
+    "objectID": "papers/Hwang-2026-corrboot.html#motivation",
+    "href": "papers/Hwang-2026-corrboot.html#motivation",
+    "title": "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis",
+    "section": "Motivation",
+    "text": "Motivation\nWhen two diagnostic tests are evaluated on the same participants, their estimated sensitivities and false positive rates are correlated.\nExisting bootstrap approaches may ignore this within-study dependence, which can underestimate uncertainty when comparing the AUCs of two SROC curves.\nThe main target is\n\\[\n\\Delta AUC = AUC_1 - AUC_2.\n\\]"
+  },
+  {
+    "objectID": "papers/Hwang-2026-corrboot.html#main-idea",
+    "href": "papers/Hwang-2026-corrboot.html#main-idea",
+    "title": "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis",
+    "section": "Main Idea",
+    "text": "Main Idea\nThe paper proposes a correlation-aware bootstrap (CorrBoot) for inference on (AUC).\nThe method:\n\nmodels the two diagnostic tests jointly using a four-variate random-effects model,\nreconstructs feasible within-study correlations using Fréchet bounds,\nstabilizes the correlation estimates using Fisher’s (z)-transformation,\ngenerates bootstrap samples while preserving within-study dependence.\n\nAn important advantage is that the method does not require individual participant data."
+  },
+  {
+    "objectID": "papers/Hwang-2026-corrboot.html#simulation",
+    "href": "papers/Hwang-2026-corrboot.html#simulation",
+    "title": "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis",
+    "section": "Simulation",
+    "text": "Simulation\nThe proposed CorrBoot method was compared with an independence-based bootstrap (IndepBoot).\nThe simulations varied:\n\nthe number of paired studies,\nper-study sample size,\nwithin-study correlation,\nand the true difference in AUC.\n\nCorrBoot generally maintained coverage close to the nominal 95% level, while IndepBoot showed undercoverage in several settings."
+  },
+  {
+    "objectID": "papers/Hwang-2026-corrboot.html#real-data-applications",
+    "href": "papers/Hwang-2026-corrboot.html#real-data-applications",
+    "title": "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis",
+    "section": "Real-data Applications",
+    "text": "Real-data Applications\nThe method was applied to three diagnostic meta-analysis datasets involving:\n\nMRI criteria for nipple–areolar complex invasion,\nultrasonography versus MRI for placenta accreta spectrum disorders,\nHCL versus MDQ for bipolar disorder screening.\n\nIn some comparisons, CorrBoot produced wider confidence intervals than IndepBoot, reflecting the additional uncertainty from within-study correlation."
+  },
+  {
+    "objectID": "papers/Hwang-2026-corrboot.html#main-takeaway",
+    "href": "papers/Hwang-2026-corrboot.html#main-takeaway",
+    "title": "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis",
+    "section": "Main Takeaway",
+    "text": "Main Takeaway\nIgnoring correlation between diagnostic tests evaluated on the same participants can lead to overly optimistic inference.\nCorrBoot provides a way to account for this dependence using only aggregated 2 × 2 data."
+  },
+  {
+    "objectID": "papers/Hwang-2026-corrboot.html#limitations",
+    "href": "papers/Hwang-2026-corrboot.html#limitations",
+    "title": "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis",
+    "section": "Limitations",
+    "text": "Limitations\n\nThe method relies on an approximate normal model on the logit scale.\nCorrelation estimation may be unstable when only a small number of paired studies are available."
+  },
+  {
+    "objectID": "papers/Hwang-2026-corrboot.html#my-notes",
+    "href": "papers/Hwang-2026-corrboot.html#my-notes",
+    "title": "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis",
+    "section": "My Notes",
+    "text": "My Notes\nThe key contribution of this paper is not a new AUC estimator itself, but a better way to quantify uncertainty in the difference between two SROC AUCs when diagnostic tests are correlated within studies.\nThe distinction between IndepBoot and CorrBoot is therefore mainly about whether the bootstrap preserves the dependence structure between the two tests."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Paper Reviews",
+    "section": "",
+    "text": "This site contains my notes and reviews of papers related to statistics, machine learning, biomedical AI, and related topics.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nA Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis\n\n\n\nMeta-analysis\n\nBootstrap\n\n\n\nA correlation-aware bootstrap method for comparing SROC AUCs in diagnostic test accuracy meta-analysis.\n\n\n\n\n\nJan 1, 2026\n\n\nSeungyong Hwang, Janghyun Kim, and Hyemi Choi\n\n\n\n\n\nNo matching items"
+  }
+]

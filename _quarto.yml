@@ -1,0 +1,12 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Paper Reviews"
+  page-navigation: true
+
+format:
+  html:
+    theme: flatly
+    toc: true

@@ -1,0 +1,86 @@
+---
+title: "A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis"
+author: "Seungyong Hwang, Janghyun Kim, and Hyemi Choi"
+date: "2026"
+categories:
+  - Meta-analysis
+  - Bootstrap
+description: "A correlation-aware bootstrap method for comparing SROC AUCs in diagnostic test accuracy meta-analysis."
+---
+
+## Paper Information
+
+**Title:** A Bootstrap Algorithm for Comparing Diagnostic Test Accuracy in Meta-analysis
+
+**Authors:** Seungyong Hwang, Janghyun Kim, and Hyemi Choi
+
+**Topic:** Diagnostic test accuracy meta-analysis, bootstrap inference, and SROC AUC comparison
+
+## Research Question
+
+How can we reliably compare the diagnostic accuracy of two tests when the same participants undergo both tests and only aggregated 2 × 2 tables are available?
+
+## Motivation
+
+When two diagnostic tests are evaluated on the same participants, their estimated sensitivities and false positive rates are correlated.
+
+Existing bootstrap approaches may ignore this within-study dependence, which can underestimate uncertainty when comparing the AUCs of two SROC curves.
+
+The main target is
+
+$$
+\Delta AUC = AUC_1 - AUC_2.
+$$
+
+## Main Idea
+
+The paper proposes a **correlation-aware bootstrap (CorrBoot)** for inference on \(\Delta AUC\).
+
+The method:
+
+1. models the two diagnostic tests jointly using a four-variate random-effects model,
+2. reconstructs feasible within-study correlations using Fréchet bounds,
+3. stabilizes the correlation estimates using Fisher's \(z\)-transformation,
+4. generates bootstrap samples while preserving within-study dependence.
+
+An important advantage is that the method does not require individual participant data.
+
+## Simulation
+
+The proposed CorrBoot method was compared with an independence-based bootstrap (IndepBoot).
+
+The simulations varied:
+
+- the number of paired studies,
+- per-study sample size,
+- within-study correlation,
+- and the true difference in AUC.
+
+CorrBoot generally maintained coverage close to the nominal 95% level, while IndepBoot showed undercoverage in several settings.
+
+## Real-data Applications
+
+The method was applied to three diagnostic meta-analysis datasets involving:
+
+- MRI criteria for nipple–areolar complex invasion,
+- ultrasonography versus MRI for placenta accreta spectrum disorders,
+- HCL versus MDQ for bipolar disorder screening.
+
+In some comparisons, CorrBoot produced wider confidence intervals than IndepBoot, reflecting the additional uncertainty from within-study correlation.
+
+## Main Takeaway
+
+Ignoring correlation between diagnostic tests evaluated on the same participants can lead to overly optimistic inference.
+
+CorrBoot provides a way to account for this dependence using only aggregated 2 × 2 data.
+
+## Limitations
+
+- The method relies on an approximate normal model on the logit scale.
+- Correlation estimation may be unstable when only a small number of paired studies are available.
+
+## My Notes
+
+The key contribution of this paper is not a new AUC estimator itself, but a better way to quantify uncertainty in the **difference between two SROC AUCs** when diagnostic tests are correlated within studies.
+
+The distinction between IndepBoot and CorrBoot is therefore mainly about whether the bootstrap preserves the dependence structure between the two tests.
