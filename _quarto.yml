@@ -5,8 +5,19 @@ project:
 website:
   title: "Paper Reviews"
   page-navigation: true
+  navbar:
+    title: "Paper Reviews"
+    search: true
+    right:
+      - text: "GitHub"
+        href: https://github.com/gimnamyun5/paper-reviews
 
 format:
   html:
     theme: flatly
+    css: styles.css
     toc: true
+    grid:
+      body-width: 900px
+      margin-width: 220px
+      gutter-width: 2rem

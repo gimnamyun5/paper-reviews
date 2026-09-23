@@ -5,10 +5,12 @@ listing:
   contents: papers
   sort: "date desc"
   type: default
+  fields: [title, description]
   categories: true
-  sort-ui: true
+  sort-ui: false
   filter-ui: true
+  page-size: 10
 ---
 
-This site contains my notes and reviews of papers related to statistics,
-machine learning, biomedical AI, and related topics.
+Notes and reviews of papers in statistics, machine learning, biomedical AI,
+and related topics.
